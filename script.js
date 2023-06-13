@@ -1,10 +1,13 @@
 //your JS code here. If required.
-   let str=prompt("Enter a String");
-       let str1=str[nonreapting(str)]
-      function nonreapting(s){
-    for(i=0; i<s.length; i++)
-        if(s.indexOf(s[i])===s.lastIndexOf(s[i])) return i
-    return -1
+ let str=prompt("Enter a String");
+
+       function firstNonRepeatingCharacter(str) {
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (str.indexOf(char) == i && str.indexOf(char, i + 1) == -1) {
+      return char;
+    }
+  }
+  return "_";
 }
-//console.log(str1);
-alert(str1);
+alert(firstNonRepeatingCharacter(str));
