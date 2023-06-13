@@ -8,6 +8,6 @@
       return char;
     }
   }
-  return "_";
+  return "null";
 }
 alert(firstNonRepeatingCharacter(str));
